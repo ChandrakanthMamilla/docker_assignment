@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag chandrakanthm/hello-world-fastapi:latest_v1.0
+      run: docker build . --file Dockerfile --tag chandrakanthm/hello-world-fastapi:latest
     - name: Push the Docker image 
-      run: docker login -u chandrakanthm -p ${{ secrets.DOCKERHUB_TOKEN }} && docker push chandrkanthm/hello-world-fastapi:latest_v1.0
+      run: docker login -u chandrakanthm -p ${{ secrets.DOCKERHUB_TOKEN }} && docker push chandrkanthm/hello-world-fastapi:latest
